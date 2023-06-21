@@ -5,7 +5,7 @@ let deleteBtn = document.getElementById("deleteBtn")
 let submitBtn = document.getElementById("submitBtn");
 
 async function getGiphy (search) {
-    const giphy = await axios.get(`http://api.giphy.com/v1/gifs/random?tag=${search}&api_key=2MeN1NMCzou5mDxLo3x7z7yTYJleckBM`);
+    const giphy = await axios.get(`https://api.giphy.com/v1/gifs/random?tag=${search}&api_key=2MeN1NMCzou5mDxLo3x7z7yTYJleckBM`);
     let displayGiphy = document.createElement("img");
     displayGiphy.src = giphy.data.data.images.original.url;
     document.body.appendChild(displayGiphy);
